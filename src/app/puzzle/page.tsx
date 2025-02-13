@@ -128,8 +128,6 @@ export default function PuzzlePage() {
 function PuzzleTile({ id }: { id: number }) {
   const { attributes, listeners, setNodeRef, transform, transition } =
     useSortable({ id });
-
-    touchAction: 'none',
   const style = {
     transform: CSS.Transform.toString(transform),
     transition,
@@ -138,7 +136,7 @@ function PuzzleTile({ id }: { id: number }) {
     backgroundPosition: `${(id % GRID_SIZE) * (100 / GRID_SIZE)}% ${
       Math.floor(id / GRID_SIZE) * (100 / GRID_SIZE)
     }%`,
-    touchAction: 'none',
+    touchAction: "none",
   };
 
   return (
